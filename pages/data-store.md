@@ -66,8 +66,6 @@ It has 3 parts:
 layout: center
 ---
 
-## 1. Global State Singleton
-
 ````md magic-move
 ```ts
 // useUserSettings.js

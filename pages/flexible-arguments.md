@@ -174,9 +174,9 @@ layout: two-cols
 
 ```js
 // useLogger.js
-export default function(value) {
+export default function(message) {
   watchEffect(() => {
-    console.log(value);
+    console.log(message.value);
   })
 }
 ```
@@ -196,9 +196,9 @@ layout: two-cols
 
 ```js
 // useLogger.js
-export default function(value) {
+export default function(message) {
   watchEffect(() => {
-    console.log(value);
+    console.log(message.value);
   })
 }
 ```
@@ -220,9 +220,9 @@ layout: two-cols
 
 ```js
 // useLogger.js
-export default function(value) {
+export default function(message) {
   watchEffect(() => {
-    console.log(value);
+    console.log(message.value);
   })
 }
 ```
@@ -240,9 +240,9 @@ layout: two-cols
 
 ```js {4}
 // useLogger.js
-export default function(value) {
+export default function(message) {
   watchEffect(() => {
-    console.log(value);
+    console.log(message.value);
   })
 }
 ```
@@ -260,9 +260,9 @@ layout: two-cols
 
 ```js {4}
 // useLogger.js
-export default function(value) {
+export default function(message) {
   watchEffect(() => {
-    console.log(toValue(value));
+    console.log(toValue(message));
   })
 }
 ```
@@ -281,10 +281,10 @@ layout: two-cols
 ```js
 // useLogger.ts
 export default function(
-  value: MaybeRefOrGetter<string>
+  message: MaybeRefOrGetter<string>
 ) {
   watchEffect(() => {
-    console.log(toValue(value));
+    console.log(toValue(message));
   })
 }
 ```
@@ -301,12 +301,6 @@ layout: center
 ---
 
 ## Use `ref` for inputs that need to be reactive
-
----
-layout: center
----
-
-## Use `toValue` for inputs that are *not* reactive
 
 ---
 layout: center
